@@ -1,0 +1,114 @@
+body {
+    position: relative;
+    margin: 0px;
+    z-index: 0;
+}
+
+.popup_contents {
+    position: fixed;
+    width: 100%;
+    height: 10em;
+    top: -10em;
+    padding: 0;
+    margin: 0;
+    z-index: 25;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.course_node {
+    position: absolute;
+    width: 20%;
+    height: 3em;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.slider_button {
+    position: fixed;
+    top: 0;
+    height: 2em;
+    width: 10%;
+    margin: 0;
+    padding: 0;
+    background-color: #00a3bc;
+    z-index: 20;
+}
+
+#add_course_button {
+    left: 0;
+}
+
+#refresh_view_button {
+    left: 10%;
+}
+
+#clear_courses_button {
+    right: 0;
+}
+
+#visualizer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 5;
+    background-color: #dddddd;
+    overflow: scroll;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background-color: rgba(0,0,0,0);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #000000;
+    opacity: 0;
+    z-index: 100;
+}
+
+#clear_prompt {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+    display: none;
+    background-color: #777777;
+    opacity: 0;
+    z-index: 105;
+    text-align: center;
+}
+
+.prompt_button {
+    position: absolute;
+    bottom: 0%;
+    width: 20%;
+}
+
+#clear_button {
+    left: 20%;
+}
+
+#cancel_button {
+    left: 60%;
+}
+

@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+<body id="body" onbeforeunload="saveCourses()">
+  <script src="js/course.js"></script>
+  <script src="js/event_handler.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/main.js"></script>
+
+  <div id="change_course" class="popup_contents">
+    Course ID: <input type="text" name="change_id" id="change_id"><br>
+    Course name: <input type="text" name="change_name" id="change_name"><br>
+    Pre-requisites: <input type="text" name="change_prereqs" id="change_prereqs"><br>
+    Co-requisites: <input type="text" name="change_coreqs" id="change_coreqs"><br>
+    <button type="button" onclick="changeCourse()">Save</button>
+    <button type="button" onclick="deleteCourse()">Delete</button>
+    <button type="button" onclick="hideChangeCourse()">Close</button>
+  </div>
+
+  <div id="add_course" class="popup_contents">
+    Course ID: <input type="text" name="add_id" id="add_id"><br>
+    Course name (optional): <input type="text" name="add_name" id="add_name"><br>
+    <button type="button" onclick="addCourse()">Add</button>
+    <button type="button" onclick="hidePopup()">Close</button>
+  </div>
+  
+  <button type="button" id="add_course_button" class="slider_button" onclick="dropdownAddCourse()">Add course</button>
+  <button type="button" id="refresh_view_button" class="slider_button" onclick="setCourseNodePositions()">Refresh visualizer</button>
+  <button type="button" id="clear_courses_button" class="slider_button" onclick="promptClearCourses()">Clear courses</button>
+  
+  <div id="visualizer">
+    <canvas id="background" onclick="hideChangeCourse()">
+    </canvas>
+  </div>
+
+  <div id="overlay">
+  </div>
+  <div id="clear_prompt">
+    Are you sure you want to clear all classes? Cleared classes cannot be recovered.
+    <button type="button" class="prompt_button" id="clear_button" onclick="clearCourses()">Clear</button>
+    <button type="button" class="prompt_button" id="cancel_button" onclick="hidePrompt()">Cancel</button>
+  </div>
+
+</body>
+</html>
